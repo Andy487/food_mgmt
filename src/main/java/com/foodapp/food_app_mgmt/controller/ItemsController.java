@@ -21,10 +21,11 @@ public class ItemsController {
         this.dataService = dataService;
     }
 
+
     @GetMapping("/getItems")
-    public String getItems(@RequestBody Items items){
-        dataService.getItems(items);
-        return "get all items";
+    public ResponseEntity<List<Items>> getItems() {
+        return new ResponseEntity<List<Items>>((List<Items>) itemRepository.findAll()
+                , HttpStatus.OK);
     }
 
 
