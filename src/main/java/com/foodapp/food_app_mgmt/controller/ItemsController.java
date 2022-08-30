@@ -13,13 +13,10 @@ import java.util.List;
 @RestController
 @RequestMapping("items")
 public class ItemsController {
-
     @Autowired
     private final DataService dataService;
-
     @Autowired
     private ItemRepository itemRepository;
-
     public ItemsController(DataService dataService) {
         this.dataService = dataService;
     }
@@ -27,7 +24,7 @@ public class ItemsController {
     @GetMapping("/getItems")
     public String getItems(@RequestBody Items items){
         dataService.getItems(items);
-return "get all items";
+        return "get all items";
     }
 
 

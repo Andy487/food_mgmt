@@ -9,12 +9,9 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("user")
 public class UserController {
-
     @Autowired
     private DataService dataService;
     private User user;
-
-
     @CrossOrigin(origins = "http://localhost:4200")
 //    @RequestMapping(value = "/registerUser", headers = "Accept=application/json", method = RequestMethod.POST)
     @PostMapping(value = "/registerUser")

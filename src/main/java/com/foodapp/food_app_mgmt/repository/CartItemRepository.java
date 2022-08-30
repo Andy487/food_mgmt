@@ -10,6 +10,7 @@ import java.util.List;
 
 @Repository
 public interface CartItemRepository extends CrudRepository<CartItem ,Long> {
+//    CartItem findByItem_id(Long item_id);
 
 //    CartItem findByUser_idAndItem_id(CartItem user_id, CartItem item_id);
 

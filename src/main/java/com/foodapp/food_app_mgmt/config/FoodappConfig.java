@@ -24,19 +24,14 @@ import javax.sql.DataSource;
 @SpringBootApplication(scanBasePackages = "com.foodapp.food_app_mgmt")
 @Configuration
 public class FoodappConfig {
-
     @Autowired
     UserRepository userRepository;
-
     @Autowired
     ItemRepository itemRepository;
-
     @Autowired
     CartItemRepository cartItemRepository;
-
     @Autowired
     DataSource dataSource;
-
 
     @Bean
     public DataService dataService(){

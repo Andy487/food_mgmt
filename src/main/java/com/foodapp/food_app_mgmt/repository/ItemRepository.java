@@ -12,9 +12,6 @@ public interface ItemRepository extends CrudRepository<Items, Long>, JpaReposito
 //    List<Items> findByItem_id(Long item_id);
 long count();
 
-//    Items findByItem_id(long item_id);
-
    List<Items> findByName(String name);
 
-//   Items findByName(String string);
 }

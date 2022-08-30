@@ -11,10 +11,5 @@ import java.util.List;
 @Repository
 public interface UserRepository  extends CrudRepository<User,Long> {
 
-    List<User> findByIdIs(Long id);
 
-    Lazy<Object> findById(User id);
-
-
-//    User findByUserId(Long Id);
 }
